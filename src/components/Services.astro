@@ -1,0 +1,110 @@
+---
+const services = [
+  {
+    title: "Consultoría Estratégica",
+    description: "Análisis profundo y soluciones personalizadas para optimizar sus procesos empresariales.",
+    icon: "💡"
+  },
+  {
+    title: "Transformación Digital",
+    description: "Implementación de tecnologías avanzadas para modernizar su operación empresarial.",
+    icon: "🔄"
+  },
+  {
+    title: "Desarrollo Tecnológico",
+    description: "Soluciones de software a medida y sistemas integrados para potenciar su negocio.",
+    icon: "⚡"
+  },
+  {
+    title: "Gestión de Proyectos",
+    description: "Metodologías ágiles y gestión eficiente para garantizar el éxito de sus proyectos.",
+    icon: "📊"
+  },
+  {
+    title: "Ciberseguridad",
+    description: "Protección integral de sus activos digitales y datos empresariales críticos.",
+    icon: "🔒"
+  },
+  {
+    title: "Análisis de Datos",
+    description: "Insights estratégicos basados en análisis avanzado de datos empresariales.",
+    icon: "📈"
+  }
+];
+---
+
+<section id="servicios" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Nuestros Servicios</h2>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+      Ofrecemos soluciones integrales diseñadas para impulsar el crecimiento y la eficiencia de su empresa.
+    </p>
+    
+    <div class="swiper services-swiper">
+      <div class="swiper-wrapper">
+        {services.map(service => (
+          <div class="swiper-slide">
+            <div class="bg-gray-50 p-8 rounded-lg border border-gray-100 h-full">
+              <div class="text-4xl mb-4">{service.icon}</div>
+              <h3 class="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
+              <p class="text-gray-600 leading-relaxed">{service.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="swiper-pagination mt-8"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+
+  new Swiper('.services-swiper', {
+    modules: [Navigation, Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 32,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+<style>
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #1f2937;
+    transform: scale(0.4);
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #1f2937;
+  }
+
+  :global(.swiper-slide) {
+    height: auto;
+  }
+</style>
