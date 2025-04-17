@@ -1,6 +1,5 @@
 ---
-
-const services = [
+/*const services = [
   {
     title: "Consultoría Estratégica",
     description: "Análisis profundo y soluciones personalizadas para optimizar sus procesos empresariales.",
@@ -31,6 +30,38 @@ const services = [
     description: "Insights estratégicos basados en análisis avanzado de datos empresariales.",
     icon: "chart-bar"
   }
+];*/
+const services = [
+  {
+    title: "Consultoría Estratégica",
+    description: "Análisis profundo y soluciones personalizadas para optimizar sus procesos empresariales.",
+    icon: "💡"
+  },
+  {
+    title: "Transformación Digital",
+    description: "Implementación de tecnologías avanzadas para modernizar su operación empresarial.",
+    icon: "🔄"
+  },
+  {
+    title: "Desarrollo Tecnológico",
+    description: "Soluciones de software a medida y sistemas integrados para potenciar su negocio.",
+    icon: "⚡"
+  },
+  {
+    title: "Gestión de Proyectos",
+    description: "Metodologías ágiles y gestión eficiente para garantizar el éxito de sus proyectos.",
+    icon: "📊"
+  },
+  {
+    title: "Ciberseguridad",
+    description: "Protección integral de sus activos digitales y datos empresariales críticos.",
+    icon: "🔒"
+  },
+  {
+    title: "Análisis de Datos",
+    description: "Insights estratégicos basados en análisis avanzado de datos empresariales.",
+    icon: "📈"
+  }
 ];
 ---
 
@@ -47,9 +78,10 @@ const services = [
         {services.map(service => (
           <div class="swiper-slide">
             <div class="bg-gray-50 p-8 rounded-lg border border-gray-100 h-full">
-              <div class="mb-4">
+              {/* }<div class="mb-4">
                 <img src={`/icons/${service.icon}.svg`} alt={service.title} class="w-8 h-8 text-gray-700" />
-              </div>
+              </div>*/}
+              <div class="text-4xl mb-4">{service.icon}</div>
               <h3 class="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
               <p class="text-gray-600 leading-relaxed">{service.description}</p>
             </div>
