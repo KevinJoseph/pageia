@@ -1,37 +1,39 @@
 ---
+
 const services = [
   {
     title: "Consultoría Estratégica",
     description: "Análisis profundo y soluciones personalizadas para optimizar sus procesos empresariales.",
-    icon: "💡"
+    icon: "academic-cap"
   },
   {
     title: "Transformación Digital",
     description: "Implementación de tecnologías avanzadas para modernizar su operación empresarial.",
-    icon: "🔄"
+    icon: "arrow-path"
   },
   {
     title: "Desarrollo Tecnológico",
     description: "Soluciones de software a medida y sistemas integrados para potenciar su negocio.",
-    icon: "⚡"
+    icon: "cpu-chip"
   },
   {
     title: "Gestión de Proyectos",
     description: "Metodologías ágiles y gestión eficiente para garantizar el éxito de sus proyectos.",
-    icon: "📊"
+    icon: "clipboard-document-list"
   },
   {
     title: "Ciberseguridad",
     description: "Protección integral de sus activos digitales y datos empresariales críticos.",
-    icon: "🔒"
+    icon: "shield-check"
   },
   {
     title: "Análisis de Datos",
     description: "Insights estratégicos basados en análisis avanzado de datos empresariales.",
-    icon: "📈"
+    icon: "chart-bar"
   }
 ];
 ---
+
 
 <section id="servicios" class="py-20 bg-white">
   <div class="container mx-auto px-4">
@@ -45,7 +47,9 @@ const services = [
         {services.map(service => (
           <div class="swiper-slide">
             <div class="bg-gray-50 p-8 rounded-lg border border-gray-100 h-full">
-              <div class="text-4xl mb-4">{service.icon}</div>
+              <div class="mb-4">
+                <img src={`/icons/${service.icon}.svg`} alt={service.title} class="w-8 h-8 text-gray-700" />
+              </div>
               <h3 class="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
               <p class="text-gray-600 leading-relaxed">{service.description}</p>
             </div>
